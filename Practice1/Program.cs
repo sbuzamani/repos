@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Practice.Common.Interfaces;
+using Practice.Common;
+using System;
 
 namespace Practice1
 {
@@ -6,16 +8,13 @@ namespace Practice1
     {
         static void Main(string[] args)
         {
-
-           
-
             int target = 10;
        
-            InputStrategy inputStrategy = new InputStrategy(target);
+            IInputStrategy inputStrategy = new ConsoleInputStrategy(target);
 
-            CalculationStrategy calculationStrategy = new CalculationStrategy(target);
+            ICalculationStrategy calculationStrategy = new CalculationStrategy(target);
 
-            DisplayStrategy displayStrategy = new DisplayStrategy();
+            IDisplayStrategy displayStrategy = new DisplayStrategy();
 
             new App(inputStrategy, calculationStrategy, displayStrategy).Run();
 

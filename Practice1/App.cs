@@ -1,4 +1,4 @@
-﻿using Practice1.Interfaces;
+﻿using Practice.Common.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,10 +8,10 @@ namespace Practice1
     public class App
     {
         private IInputStrategy _inputStrategy;
-        private CalculationStrategy _calculationStrategy;
-        private DisplayStrategy _displayStrategy;
+        private ICalculationStrategy _calculationStrategy;
+        private IDisplayStrategy _displayStrategy;
 
-        public App(IInputStrategy inputStrategy, CalculationStrategy calculationStrategy, DisplayStrategy displayStrategy)
+        public App(IInputStrategy inputStrategy, ICalculationStrategy calculationStrategy, IDisplayStrategy displayStrategy)
         {
             _inputStrategy = inputStrategy;
             _calculationStrategy = calculationStrategy;

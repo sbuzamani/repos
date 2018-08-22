@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practice1.Interfaces
+namespace Practice.Common.Interfaces
 {
     public interface IInputStrategy
     {

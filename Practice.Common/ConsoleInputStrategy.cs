@@ -1,13 +1,13 @@
-﻿using Practice1.Interfaces;
+﻿using Practice.Common.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practice1
+namespace Practice.Common
 {
     public class ConsoleInputStrategy : IInputStrategy
     {
-        private int _target;
+        protected int _target;
 
         public ConsoleInputStrategy(int target)
         {
@@ -19,8 +19,12 @@ namespace Practice1
             Console.WriteLine($"Enter number less than {_target}: ");
 
             string input = Console.ReadLine();
+            if (!int.TryParse(input, out int result))
+            {
+                throw new Exception("...");
+            }
 
-            return int.Parse(input);
+            return result;
         }
     }
 }

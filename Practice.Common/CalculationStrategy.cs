@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Practice.Common.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practice1
+namespace Practice.Common
 {
-    public class CalculationStrategy
+    public class CalculationStrategy  : ICalculationStrategy
     {
         private int _target;  
         public CalculationStrategy(int target)
