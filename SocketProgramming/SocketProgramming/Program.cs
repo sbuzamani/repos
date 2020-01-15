@@ -16,6 +16,8 @@ namespace SocketProgramming
             string seperator = "\r\n";
             Dictionary<string, string> headersDictionary = new Dictionary<string, string>();
 
+            
+
             server.Start();
 
             while (true)

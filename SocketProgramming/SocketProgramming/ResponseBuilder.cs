@@ -6,6 +6,6 @@ namespace SocketProgramming
 {
     abstract class ResponseBuilder
     {
-        public abstract string ToString();
+        public abstract Response GetResponse();
     }
 }
